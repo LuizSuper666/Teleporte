@@ -130,10 +130,10 @@ local btnConfusao = criarBotao(menu2, "Ativar Confusão")
 btnConfusao.Position = UDim2.new(0, 10, 0, 10)
 
 local pontos = {
-	Vector3.new(3, 0, 0),
-	Vector3.new(-3, 0, 0),
-	Vector3.new(0, 0, 3),
-	Vector3.new(0, 0, -3),
+	Vector3.new(24, 0, 0),
+	Vector3.new(-24, 0, 0),
+	Vector3.new(0, 0, 24),
+	Vector3.new(0, 0, -24),
 }
 
 btnConfusao.MouseButton1Click:Connect(function()
@@ -147,7 +147,7 @@ btnConfusao.MouseButton1Click:Connect(function()
 					if character and character:FindFirstChild("HumanoidRootPart") then
 						local basePos = character.HumanoidRootPart.Position
 						character.HumanoidRootPart.CFrame = CFrame.new(basePos + offset)
-						wait(0.2)
+						wait(0.1)
 					end
 				end
 			end
